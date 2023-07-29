@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <packages.apps.ValidationTools.src.com.sprd.validationtools.agingtest.CameraTextureView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="98dp"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@id/camera_view"
+            android:background="#a0000000">
+
+            <Button
+                android:id="@+id/btn_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/camera_btn_selector_1"></Button>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_openfailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="相机打开失败！"
+            android:textSize="20sp"
+            android:visibility="gone">
+
+        </TextView>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone"
+        >
+        <com.sprd.validationtools.itemstest.camera.PreviewFrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            >
+            <TextureView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+        </com.sprd.validationtools.itemstest.camera.PreviewFrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dip"
+            android:layout_alignParentBottom="true"
+            android:background="#a0000000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            >
+
+            <Button
+                android:id="@+id/start_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/camera_btn_selector_1" >
+            </Button>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/light_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/light_msg_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+		android:visibility="gone"
+		/>
+    <!--SPRD bug 765981:Add blur camera test  -->
+    <TextView
+        android:id="@+id/face_text_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/face_msg_text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请点击屏幕打开摄像头"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        >
+
+    </TextView>
+</FrameLayout>

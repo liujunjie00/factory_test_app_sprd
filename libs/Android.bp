@@ -1,0 +1,10 @@
+//prebuilt zixing_core.jar
+java_import {
+    name: "zixing_core_jar",
+    jars: ["zixing_core.jar"],
+    system_ext_specific: true,
+}
+java_import {
+    name: "android-support-v4",
+    jars: ["android-support-v4.jar"],
+}

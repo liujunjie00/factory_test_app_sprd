@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:layout_marginTop="10dp"
+     >
+
+ 	<Button
+ 	  android:id="@+id/mmi1_btn"
+      android:layout_width="300dp"
+      android:layout_height="100dp"
+      android:textSize="20sp"
+	  android:text="@string/test_mmi1"
+	  android:layout_margin="5dp"
+     />
+ 	<Button
+ 	  android:id="@+id/mmi2_btn"
+      android:layout_width="300dp"
+      android:layout_height="100dp"
+      android:textSize="20sp"
+	  android:text="@string/test_mmi2"
+	  android:layout_margin="5dp"
+     />
+ 	<Button
+ 	  android:id="@+id/reset_btn"
+      android:layout_width="300dp"
+      android:layout_height="100dp"
+      android:textSize="20sp"
+	  android:text="@string/reset_result"
+	  android:layout_margin="5dp"
+     />
+ 	
+</LinearLayout>

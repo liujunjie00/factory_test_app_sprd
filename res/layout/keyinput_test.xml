@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+     >
+ 
+ 	<TextView
+ 	  android:id="@+id/input_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Keyboard input"
+      android:textSize="16sp"
+      android:textColor="#FFFFFF"
+     />
+	<EditText
+ 	  android:id="@+id/input_et"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="16sp"
+      android:textColor="#FF0000"
+      android:paddingLeft="2dp"
+      android:focusable="auto"
+     />
+ 	
+ 	
+</LinearLayout>

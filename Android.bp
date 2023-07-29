@@ -1,0 +1,39 @@
+//
+// SPDX-FileCopyrightText: 2016-2023 Unisoc (Shanghai) Technologies Co., Ltd
+// SPDX-License-Identifier: LicenseRef-Unisoc-General-1.0
+package {
+    default_applicable_licenses: ["ValidationTools_license"],
+}
+
+license {
+    name: "ValidationTools_license",
+    license_text: [
+        "Notice.ValidationTools",
+        "License.ValidationTools",
+    ],
+}
+android_app {
+    name: "ValidationTools",
+    static_libs: [
+        "android.hardware.broadcastradio-V2.0-java",
+        "zixing_core_jar",
+    ],
+    libs: [
+        "org.apache.http.legacy",
+    ],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+    ],
+    resource_dirs: ["res"],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    aaptflags: ["--keep-raw-values"],
+    optimize: {
+        enabled: false,
+    },
+    dex_preopt: {
+        enabled: true,
+    },
+}

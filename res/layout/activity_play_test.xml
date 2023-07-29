@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <packages.apps.ValidationTools.src.com.sprd.validationtools.agingtest.CameraTextureView
+        android:id="@+id/aging_camera_view"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Chronometer
+        android:id="@+id/play_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format="00:%s"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="50sp">
+
+    </Chronometer>
+
+    <RelativeLayout
+        android:id="@+id/rl_play_video"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_vertical">
+
+        <SurfaceView
+            android:id="@+id/video_surfaceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true" />
+
+        <ImageView
+            android:id="@+id/start_and_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="bottom" >
+
+        <com.sprd.validationtools.view.VUMeter
+            android:id="@+id/vm_mic"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:visibility="gone"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2016-2023 Unisoc (Shanghai) Technologies Co., Ltd
+     SPDX-License-Identifier: LicenseRef-Unisoc-General-1.0
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" 
+    >
+ <ScrollView
+ 	android:layout_width="fill_parent"  
+    android:layout_height="wrap_content" >
+   <TextView
+        android:id="@+id/tv_hardwarehwswinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+	android:textSize="18dip"/>
+ </ScrollView>
+
+</LinearLayout>

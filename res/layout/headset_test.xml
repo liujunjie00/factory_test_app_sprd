@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tx_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/headset_notice"
+        android:textSize="@dimen/headset_text_size" />
+
+    <TextView
+        android:id="@+id/tx_insert_headset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx_notice"
+        android:text="@string/please_plugin"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/headset_text_size" />
+
+    <TextView
+        android:id="@+id/tx_press_earkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx_insert_headset"
+        android:text="@string/please_press_answer_key"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/headset_text_size" />
+
+    <TextView
+        android:id="@+id/tx_start_phoneloop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx_press_earkey"
+        android:text="@string/please_test_loopback"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/headset_text_size" />
+
+    <Button
+        android:id="@+id/btn_earkey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/pass_fail_button_size"
+        android:enabled="false"
+        android:text="@string/headset_answer_key"
+        android:textSize="@dimen/headset_text_size" >
+    </Button>
+	
+	<LinearLayout 
+    android:id="@+id/Record_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/playRecord"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:text="@string/start_record" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_marginTop="50dp"
+        >
+
+        <com.sprd.validationtools.view.VUMeter
+            android:id="@+id/uvMeter"
+            android:layout_width="280dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+</RelativeLayout>

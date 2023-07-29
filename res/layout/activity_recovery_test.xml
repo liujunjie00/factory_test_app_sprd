@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Recovery Test"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/testtime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:text="已恢复出厂次数: "
+        android:textSize="20sp" />
+    
+    <TextView 
+        android:id="@+id/countdown_tv"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/maxtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/testtime_tv"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/maxtime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行恢复出厂的最大次数: "
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/maxtime"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/maxtime_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置测试最大次数" />
+
+    <Button
+        android:id="@+id/clear_maxtime_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除设置" />
+
+    </LinearLayout>
+
+    <CheckBox 
+        android:id="@+id/erase_cb" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/maxtime"
+        android:visibility="gone"
+        android:text="Erase Flash"/>
+    
+    <CheckBox 
+        android:id="@+id/wipeall_cb" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/erase_cb"
+        android:visibility="gone"
+        android:text="Wipe All (Recovery cmd)"/>
+    
+     <CheckBox 
+        android:id="@+id/wifi_check_cb_R"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/wipeall_cb"
+         android:visibility="gone"
+        android:text="Recovery and check that is the wifi opened ?"/>
+     
+     <CheckBox 
+        android:id="@+id/eth_check_cb_R"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/wifi_check_cb_R"
+         android:visibility="gone"
+        android:text="Recovery and check that is the ethernet connected ?"/>
+    
+    <CheckBox 
+        android:id="@+id/check_sys" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eth_check_cb_R"
+        android:visibility="gone"
+        android:text="Auto check system"/>
+   
+    <TextView
+        android:id="@+id/warning_tf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/check_sys"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Make sure insert TF card already before!"
+        android:textColor="#FF0000"
+        android:textSize="26sp" 
+		android:visibility="gone"/>
+ 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/stop_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop" />
+
+        <Button
+            android:id="@+id/exit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exit" />
+    </LinearLayout>
+
+</RelativeLayout>
