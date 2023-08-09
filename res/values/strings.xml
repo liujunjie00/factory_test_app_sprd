@@ -504,4 +504,6 @@
     <string name="google_key">GoogleKey</string>
     <string name="google_key_ok">GoogleKey is OK!</string>
     <string name="google_key_fail">GoogleKey is NOT OK!</string>
+    <string name="test_auto">Auto test</string>
+    <string name="test_manual">Manual test</string>
 </resources>

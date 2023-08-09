@@ -206,6 +206,16 @@
             android:exported="false"
             android:theme="@android:style/Theme.Black">
         </activity>
+
+
+        <!--liujunjie-->
+        <activity
+            android:name=".itemstest.AutoListItemTestActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|mnc|mcc"
+            android:screenOrientation="landscape"
+            android:exported="false"
+            android:theme="@android:style/Theme.Black">
+        </activity>
 		<activity
             android:name=".itemstest.MMI2TestActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|mnc|mcc"
@@ -646,11 +656,12 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:exported="false">
         </activity>
+        <!--liujunjie modefy-->
         <activity
             android:name=".itemstest.sensor.GsensorTestActivity"
             android:configChanges="keyboardHidden"
             android:label="@string/gravity_sensor_test"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:exported="false">
         </activity>

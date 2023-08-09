@@ -48,10 +48,12 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Handler;
 
 import com.sprd.validationtools.BaseActivity;
 import com.sprd.validationtools.Const;
 import com.sprd.validationtools.R;
+import com.sprd.validationtools.itemstest.AutoListItemTestActivity;
 import com.sprd.validationtools.utils.FileUtils;
 import android.view.Window;
 import packages.apps.ValidationTools.src.com.sprd.validationtools.agingtest.CameraProxy;
@@ -201,7 +203,13 @@ public class CameraTestActivity extends BaseActivity implements TextureView.Surf
 //            }
 //        });
 
-        initCameraView();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                initCameraView();
+            }
+        },2000);
     }
     private CameraTextureView mCameraView;
     private CameraProxy mCameraProxy;

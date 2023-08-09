@@ -100,7 +100,7 @@ public class WatermarkService extends Service {
             mGooglekeyParam.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
                 | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
          //   if (ActivityManager.isHighEndGfx()) {
-                mGooglekeyParam.privateFlags |= WindowManager.LayoutParams.SYSTEM_FLAG_SHOW_FOR_ALL_USERS;;
+                mGooglekeyParam.privateFlags |= WindowManager.LayoutParams.SYSTEM_FLAG_SHOW_FOR_ALL_USERS;
          //   }
             mGooglekeyParam.format = mGooglekeyTv.getBackground().getOpacity();
             mGooglekeyParam.alpha = GOOGLE_KEY_WATER_MARK_ALPHA;

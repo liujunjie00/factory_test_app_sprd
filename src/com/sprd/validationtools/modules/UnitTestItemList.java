@@ -98,10 +98,10 @@ public class UnitTestItemList extends com.sprd.validationtools.modules.TestItemL
 //            ProxSensorCalibrationActivity.class.getName(),
 //            LightSensorCalibrationActivity.class.getName(),//光线传感器校验
 //            PressureSensorCalibrationActivity.class.getName(),
-            GsensorTestActivity.class.getName(),
+           /* GsensorTestActivity.class.getName(),*/
 //            CompassTestActivity.class.getName(),
 //            PsensorTestActivity.class.getName(),
-            LsensorTestActivity.class.getName(),//光线传感器测试customization.picker.CustomizationPickerApplicationcustomization.picker.CustomizationPickerApplication
+           /* LsensorTestActivity.class.getName(),*///光线传感器测试customization.picker.CustomizationPickerApplicationcustomization.picker.CustomizationPickerApplication
 //            ProxSensorNoiseTestActivity.class.getName(),
          //   MagneticTestActivity.class.getName(),
 //            GyroscopeTestActivity.class.getName(),
@@ -122,7 +122,7 @@ public class UnitTestItemList extends com.sprd.validationtools.modules.TestItemL
 			ChargerTest.class.getName(),
 //            QuickChargerTest.class.getName(),
 //            WirelessChargerTest.class.getName(),
-            HeadSetTest.class.getName(),
+            /*HeadSetTest.class.getName(),*/
 //            FMTest.class.getName(),
 //            SoundTriggerTestActivity.class.getName(),
 //            RedLightTest.class.getName(), GreenLightTest.class.getName(),
@@ -133,7 +133,8 @@ public class UnitTestItemList extends com.sprd.validationtools.modules.TestItemL
 			StorageTest.class.getName(),
             SDCardTest.class.getName(),
 //            SIMCardTestActivity.class.getName(),
-            OTGTest.class.getName()//OTG测试
+            OTGTest.class.getName(),//OTG测试
+            GsensorTestActivity.class.getName()
     };
 
     private static UnitTestItemList mTestItemListInstance = null;

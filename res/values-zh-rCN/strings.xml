@@ -132,7 +132,7 @@
     <string name="android_version">Android版本:</string>
     <string name="prop_version">内核Version:</string>
     <string name="build_number">版本号:</string>
-    <string name="tp_version">TP 版本: V0.2</string>
+    <string name="tp_version">TP 版本: V0.3</string>
     <string name="ca_version">摄像头信息:前置GC5035 500万+后置OV8858 800万</string>
     <string name="device_sn">设备串号:</string>
     <string name="osensor_orien">指针方向</string>
@@ -445,4 +445,6 @@
     <string name="mmi_reset">"重置"</string>
     <string name="dialog_cancel">"取消"</string>
     <string name="btn_start">"开始测试"</string>
+    <string name="test_auto">"自动测试"</string>
+    <string name="test_manual">"手动测试"</string>
 </resources>

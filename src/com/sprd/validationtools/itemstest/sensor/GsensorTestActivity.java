@@ -106,7 +106,7 @@ public class GsensorTestActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         try {
             mSystemCurrentAccelerometerRotationValue = Settings.System.getInt(getContentResolver(),
                     Settings.System.ACCELEROMETER_ROTATION);

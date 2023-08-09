@@ -127,6 +127,21 @@ public class FrontCameraTestActivity extends BaseActivity implements TextureView
         }
     };
 
+    /*
+    * liujunjie add */
+    /*@Override
+    public void onClick(View v) {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        },500);
+
+
+    }*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -473,18 +488,18 @@ public class FrontCameraTestActivity extends BaseActivity implements TextureView
     @Override
     protected void onPause() {
         super.onPause();
-//        closeCamera();
+        closeCamera();
     }
 
     @Override
     public void onDestroy() {
-//        if (mHandler != null) {
-//            mHandler.removeCallbacks(mTimeOut);
-//        }
-//        if (mTakePhotoHandler != null) {
-//            mTakePhotoHandler.removeCallbacksAndMessages(null);
-//        }
-//        stopBackgroundThread();
+        if (mHandler != null) {
+            mHandler.removeCallbacks(mTimeOut);
+        }
+        if (mTakePhotoHandler != null) {
+            mTakePhotoHandler.removeCallbacksAndMessages(null);
+        }
+        stopBackgroundThread();
         deleteCameraPictures();
         super.onDestroy();
     }

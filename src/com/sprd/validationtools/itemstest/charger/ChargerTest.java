@@ -420,7 +420,7 @@ public class ChargerTest extends BaseActivity {
 
     @Override
     public void onDestroy() {
-//        unregisterReceiver(mBroadcastReceiver);
+       unregisterReceiver(mBroadcastReceiver);
 //        mHandler.removeCallbacks(mCompleteTest);
         // UNISOC: Bug1452480 cancel the task when activity ondestroy
 //        if (mAsyncTask != null ) {

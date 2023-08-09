@@ -73,7 +73,7 @@ public class SingleTouchPointTest extends BaseActivity {
 
     private DisplayMetrics mDisplayMetrics;
 
-    private static final int STOKEN_WIDTH = 10;
+    private static final int STOKEN_WIDTH = 5;
 
     private boolean mIsUpcanvasUnlocked = false;
     private boolean isShowNavigationBar = false;
@@ -228,8 +228,11 @@ public class SingleTouchPointTest extends BaseActivity {
         int pointCount = event.getPointerCount();
         if (pointCount == 1) {
             int action = event.getAction();
-            float touchX = event.getX();
-            float touchY = event.getY();
+            /*float touchX = event.getX() ;
+            float touchY = event.getY();*/
+
+            float touchX = event.getRawX();
+            float touchY = event.getRawY();
             switch (action) {
             case MotionEvent.ACTION_DOWN:
                 synchronized (mLock) {

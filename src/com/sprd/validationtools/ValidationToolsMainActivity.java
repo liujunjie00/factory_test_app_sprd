@@ -12,6 +12,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.SQLException;
 import android.os.Bundle;
+
+import com.sprd.validationtools.itemstest.AutoListItemTestActivity;
 import com.sprd.validationtools.nonpublic.SystemPropertiesProxy;
 import android.os.UserHandle;
 import android.preference.PreferenceManager;
@@ -97,12 +99,15 @@ public class ValidationToolsMainActivity extends Activity implements
                     this.getString(R.string.test_info),
                     this.getString(R.string.camera_cali_verify),
                     this.getString(R.string.reset) */
-			  this.getString(R.string.test_mmi1),
-			  this.getString(R.string.test_mmi2),
+			  /*this.getString(R.string.test_mmi1),*/
+			  /*this.getString(R.string.test_mmi2),*/
+			  this.getString(R.string.test_manual), //手动测试
+                    this.getString(R.string.test_auto),
 			  this.getString(R.string.test_aging),
 			  this.getString(R.string.google_key),
 //			  this.getString(R.string.test_info),
 			  this.getString(R.string.test_case_result)
+
             };
         }else{
             mListItemString = new String[] {
@@ -110,8 +115,10 @@ public class ValidationToolsMainActivity extends Activity implements
                     this.getString(R.string.item_test),
                     this.getString(R.string.test_info),
                     this.getString(R.string.reset) */
-			 this.getString(R.string.test_mmi1),
-			 this.getString(R.string.test_mmi2),
+			 /*this.getString(R.string.test_mmi1),*/
+			 /*this.getString(R.string.test_mmi2),*/
+                    this.getString(R.string.test_manual),
+                    this.getString(R.string.test_auto),
 			 this.getString(R.string.test_aging),
 			 this.getString(R.string.google_key),
 //			 this.getString(R.string.test_info),
@@ -172,7 +179,7 @@ public class ValidationToolsMainActivity extends Activity implements
         startValidationToolsService(this, false);
         super.onDestroy();
 		////tqy 230325
-		userVal();
+		//userVal();
 		////tqy 230325
     }
 
@@ -333,8 +340,11 @@ public class ValidationToolsMainActivity extends Activity implements
                 Intent intent = new Intent(this, GoogleKeyActivity.class);
                 startActivity(intent);	
 			}else if(getString(R.string.test_case_result).equals(clickItem)){
-                Intent intent = new Intent(this, MainResultActivity.class);
-                startActivity(intent); 	
+                /*Intent intent = new Intent(this, MainResultActivity.class);
+                startActivity(intent);*/
+
+                Intent intent = new Intent(this, TestResultActivity.class);
+                startActivity(intent);
             }else if(getString(R.string.test_info).equals(clickItem)){
                 Intent intent = new Intent(this, TestInfoMainActivity.class);
                 intent.putExtra(IS_SYSTEM_TESTED, mIsTested);
@@ -358,6 +368,13 @@ public class ValidationToolsMainActivity extends Activity implements
                 })
                 .setPositiveButton(android.R.string.cancel, null);
                 builder.show();
+            }else if (getString(R.string.test_auto).equals(clickItem)){
+                Intent intent = new Intent(this, AutoListItemTestActivity.class);
+                startActivity(intent);
+            }else if (getString(R.string.test_manual).equals(clickItem)){
+                //test_manual
+                Intent intent = new Intent(this, ListItemTestActivity.class);
+                startActivity(intent);
             }
         }
     }
