@@ -193,24 +193,29 @@ public class GsensorTestActivity extends BaseActivity {
         if (Math.abs(x) <= Math.abs(y)) {
             if (y < 0) {
                 // up is low
-                arrowId = R.drawable.arrow_up;
-                mUpTxt.setBackgroundResource(arrowId);
+                //arrowId = R.drawable.arrow_up;
+                arrowId = R.drawable.arrow_left;
+                mLeftTxt.setBackgroundResource(arrowId);
             } else if (y > 0) {
                 // down is low
-                arrowId = R.drawable.arrow_down;
-                mDownTxt.setBackgroundResource(arrowId);
+                //arrowId = R.drawable.arrow_down;
+                arrowId = R.drawable.arrow_right;
+                mRightTxt.setBackgroundResource(arrowId);
             } else if (y == 0) {
                 // do nothing
             }
         } else {
             if (x < 0) {
                 // right is low
-                arrowId = R.drawable.arrow_right;
-                mRightTxt.setBackgroundResource(arrowId);
+                //arrowId = R.drawable.arrow_right;
+                arrowId = R.drawable.arrow_up;
+                mUpTxt.setBackgroundResource(arrowId);
             } else {
                 // left is low
-                arrowId = R.drawable.arrow_left;
-                mLeftTxt.setBackgroundResource(arrowId);
+                //arrowId = R.drawable.arrow_left;
+                arrowId = R.drawable.arrow_down;
+                //mLeftTxt.setBackgroundResource(arrowId);
+                mDownTxt.setBackgroundResource(arrowId);
             }
         }
         if (!mPassed && mUpTxt.getBackground() != null && mDownTxt.getBackground() != null

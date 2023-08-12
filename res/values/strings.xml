@@ -17,8 +17,8 @@
     <string name="accessories_test_title">Accessories</string>
     <string name="wireless_test_title">Wireless</string>
     <string name="sensor_test_title">Sensor</string>
-    <string name="tp_version">TP VERSION: V0.2</string>
-    <string name="ca_version">Camera information:PreGC5035 500万+RearOV8858 800万</string>
+    <string name="tp_version">TP VERSION: V0.3</string>
+    <string name="ca_version">Camera information:Pre 500万+Rear 800万</string>
     <string name="camera_test_title">Camera</string>
     <string name="key_test_title">Key</string>
     <string name="full_test_title">Full Test</string>
