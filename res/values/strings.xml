@@ -506,4 +506,5 @@
     <string name="google_key_fail">GoogleKey is NOT OK!</string>
     <string name="test_auto">Auto test</string>
     <string name="test_manual">Manual test</string>
+    <string name="dmr_key">DRM test</string>
 </resources>

@@ -447,4 +447,5 @@
     <string name="btn_start">"开始测试"</string>
     <string name="test_auto">"自动测试"</string>
     <string name="test_manual">"手动测试"</string>
+    <string name="dmr_key">DRM test</string>
 </resources>

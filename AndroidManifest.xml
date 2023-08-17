@@ -368,6 +368,14 @@
             android:screenOrientation="landscape"
 			>
         </activity>
+
+        <activity
+            android:name=".testinfo.GoogleDRMVersionTest"
+            android:label="@string/google_key"
+            android:theme="@android:style/Theme.Black"
+            android:screenOrientation="landscape"
+            >
+        </activity>
 		<activity
             android:name=".testinfo.MainResultActivity"
             android:label="@string/test_result_title"

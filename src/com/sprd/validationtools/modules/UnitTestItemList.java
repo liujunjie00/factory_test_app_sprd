@@ -134,7 +134,9 @@ public class UnitTestItemList extends com.sprd.validationtools.modules.TestItemL
             SDCardTest.class.getName(),
 //            SIMCardTestActivity.class.getName(),
             OTGTest.class.getName(),//OTG测试
-            GsensorTestActivity.class.getName()
+            GsensorTestActivity.class.getName(),
+            HeadSetTest.class.getName()
+
     };
 
     private static UnitTestItemList mTestItemListInstance = null;

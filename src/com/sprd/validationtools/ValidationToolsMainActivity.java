@@ -40,6 +40,7 @@ import com.sprd.validationtools.itemstest.TestResultActivity;
 import com.sprd.validationtools.modules.FullTestItemList;
 import com.sprd.validationtools.modules.TestItem;
 import com.sprd.validationtools.sqlite.EngSqlite;
+import com.sprd.validationtools.testinfo.GoogleDRMVersionTest;
 import com.sprd.validationtools.testinfo.TestInfoMainActivity;
 import com.sprd.validationtools.testinfo.GoogleKeyActivity;
 import com.sprd.validationtools.testinfo.MainResultActivity;
@@ -105,6 +106,7 @@ public class ValidationToolsMainActivity extends Activity implements
                     this.getString(R.string.test_auto),
 			  this.getString(R.string.test_aging),
 			  this.getString(R.string.google_key),
+			  this.getString(R.string.dmr_key),
 //			  this.getString(R.string.test_info),
 			  this.getString(R.string.test_case_result)
 
@@ -121,6 +123,8 @@ public class ValidationToolsMainActivity extends Activity implements
                     this.getString(R.string.test_auto),
 			 this.getString(R.string.test_aging),
 			 this.getString(R.string.google_key),
+
+                    this.getString(R.string.dmr_key),
 //			 this.getString(R.string.test_info),
 			 this.getString(R.string.test_case_result)
             };
@@ -374,6 +378,10 @@ public class ValidationToolsMainActivity extends Activity implements
             }else if (getString(R.string.test_manual).equals(clickItem)){
                 //test_manual
                 Intent intent = new Intent(this, ListItemTestActivity.class);
+                startActivity(intent);
+            }else if (getString(R.string.dmr_key).equals(clickItem)){
+                //test_manual
+                Intent intent = new Intent(this, GoogleDRMVersionTest.class);
                 startActivity(intent);
             }
         }
